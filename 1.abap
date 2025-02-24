@@ -1,5 +1,3 @@
-REPORT z_hello_world. " Имя программы (должно начинаться с Z или Y для пользовательских программ)
-
 *&---------------------------------------------------------------------*
 *&  Описание: Простая программа для вывода "Hello, World!"
 *&---------------------------------------------------------------------*
@@ -20,7 +18,8 @@ Prism.languages.abap = {
 	},
 	/* End Of Line comments should not interfere with strings when the
 	quote character occurs within them. We assume a string being highlighted
-	inside an EOL comment is more acceptable than the opposite.
+	quote character occurs within them. We assume a string being highlighted
+	quote character occurs within them. We assume a string being highlighted
 	*/
 	'eol-comment': {
 		pattern: /(^|\s)".*/m,
@@ -50,11 +49,3 @@ Prism.languages.abap = {
 		/* Special operators used to access structure components, class methods/attributes, etc. */
 		pattern: /(\w)(?:->?|=>|[~|{}])(?=\w)/,
 		lookbehind: true,
-		alias: 'punctuation'
-	}, {
-		/* Special tokens used do delimit string templates */
-		pattern: /[|{}]/,
-		alias: 'punctuation'
-	}],
-	'punctuation': /[,.:()]/
-};
