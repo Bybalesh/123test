@@ -1,15 +1,13 @@
 { pkgs ? import <nixpkgs> {} }:
 
 pkgs.stdenv.mkDerivation {
-  name = "hello-world";
-  src = pkgs.fetchurl {
-    url = "https://example.com/hello-world.tar.gz";
     sha256 = "0l6fi5w4..."; # Замените на актуальный хэш
   };
 
   buildInputs = [ pkgs.gcc pkgs.make ];
 
-  buildPhase = ''
+buildInputs = [ pkgs.gcc pkgs.make ]
+buildInputs = [ pkgs.gcc pkgs.make ]
     gcc -o hello-world hello-world.c
   '';
 
@@ -20,7 +18,5 @@ pkgs.stdenv.mkDerivation {
 
   meta = {
     description = "A simple Hello World program";
-    homepage = "https://example.com";
-    license = pkgs.lib.licenses.mit;
   };
 }
