@@ -5,17 +5,7 @@ package Greeting is
 
 package body Greeting is
 
-   procedure Hello (Name : String) is
-   begin
-      Put_Line ("Hello, " & Name & "!");
-   end Hello;
-
-end Greeting;
-
-end Greeting;
-
-Prism.languages.ada = {
-	'comment': /--.*/,
+   proce
 	'string': /"(?:""|[^"\r\f\n])*"/,
 	'number': [
 		{
@@ -29,6 +19,4 @@ Prism.languages.ada = {
 	'boolean': /\b(?:false|true)\b/i,
 	'operator': /<[=>]?|>=?|=>?|:=|\/=?|\*\*?|[&+-]/,
 	'punctuation': /\.\.?|[,;():]/,
-	'char': /'.'/,
-	'variable': /\b[a-z](?:\w)*\b/i
 };
